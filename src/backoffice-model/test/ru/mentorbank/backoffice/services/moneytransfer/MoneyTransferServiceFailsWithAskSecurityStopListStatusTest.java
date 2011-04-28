@@ -43,6 +43,8 @@ public class MoneyTransferServiceFailsWithAskSecurityStopListStatusTest extends
 
 		mockedAccountService = mock(AccountServiceBean.class);
 		// Dynamic Stub
+		// закоментировал, т.к. проверка баланса dstAcc нигде и не вызывается 
+		// (может для проверки поступления денег, но пока это нет же)
 		//when(mockedAccountService.verifyBalance(dstAccountInfo)).thenReturn(
 		//		true);
 		moneyTransferService.setAccountService(mockedAccountService);
